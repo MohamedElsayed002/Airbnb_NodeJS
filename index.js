@@ -26,6 +26,10 @@ app.get('/' , (req,res) => {
     res.send('Welcome sir')
 })
 
+app.get('/Mohamed' , (req,res) => {
+    res.send('Mohamed Elsayed Ali')
+})
+
 app.use(notFound)
 app.use(errorHandlerMiddleware)
 
