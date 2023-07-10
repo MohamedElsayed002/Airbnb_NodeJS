@@ -5,8 +5,8 @@ import { PlaceModel } from "../models/place.model.js";
 
 
 const createPlace = async (req,res) => {
-    // req.body.owner = req.user.userId
-    req.body.owner = req.body.id
+    req.body.owner = req.user.userId
+    // req.body.owner = req.body.id
     const place= new PlaceModel(req.body)
     await place.save()
     res.status(201).json({message : "place saved successfully" , place})
