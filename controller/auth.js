@@ -41,7 +41,7 @@ const Login = async (req,res) => {
 
 
 const protectedRoutes = async (req,res,next) => {
-    const token = req.headers.token 
+    const token = req.headers.Authorization 
     if(!token) {
         throw new Error('please login first')
     }
